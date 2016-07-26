@@ -34,9 +34,9 @@ class index(View):
 
 			thumb_file = InMemoryUploadedFile(thumb_io, None, 'foooo.jpg', 'image/jpeg',thumb_io.len, None)
 
-			isit=Images.objects.create(Image=thumb_file,Filter='Filterd')
+			final_image=Images.objects.create(Image=thumb_file,Filter='Filterd')
 
-			return render(request,"create_images/home.html",{'form':Upload_image_form,'image':isit,'uploaded_image':new_image})
+			return render(request,"create_images/home.html",{'form':Upload_image_form,'image':final_image,'uploaded_image':new_image})
 		else :
 			return render(request,"create_images/home.html",{'form':Upload_image_form,"message":user_form.errors})
 

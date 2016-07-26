@@ -1,11 +1,36 @@
     {% extends 'base.html' %}
 
    {% block content %}
-     <div class="container">
 
-      {% if image %}
-		     <a href="{{ image.Image.url }}"><img src="{{ image.Image.url }}" alt="We hate to say but something went wrong !" class="img-responsive" ></a>
-      {% endif %}
+     <div class="row" style="margin-top:50px;">
+
+     <div class="container">
+   		  <div class="col-sm-5">
+     	    
+     		 {% if image %}
+		     	<a href="{{ image.Image.url }}"><img src="{{ image.Image.url }}" alt="We hate to say but something went wrong !" class="img-thumbnail" width="400" height="400" ></a>
+      			
+      		 <p> click on the image to view and download the complete image </p> 
+          <p><button type="button" class="btn btn-default" data-toggle="collapse" data-target="#uploaded_image">Click for uploaded image !</button></p>
+        
+           {% endif %}
+          
+        </div>
+
+
+      	
+      <div class="col-sm-5">
+     	 
+     	 <div id="uploaded_image" class="collapse"> 
+      	  {% if uploaded_image %}
+		   	<a href="{{ uploaded_image.Image.url }}"><img src="{{ uploaded_image.Image.url }}" alt="We hate to say but something went wrong !" class="img-thumbnail" width="400" height="400"></a>
+     	  <p> click on the image to view and download the complete image </p> 
+       
+          {% endif %}  
+      
+       	</div> 	   
+  	   </div>
+
     </div>
 	
   {% endblock %}	
