@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	</head>
+	
+	<body>
+	
+
+		<form role="form" enctype="multipart/form-data" action="/home/" method="POST" >
+			{% csrf_token %}
+			{{ form }}
+		<button type="submit" class="btn btn-default" >Upload image !</button>
+	
+		<img src="{{ image.Image.url }}" alt="Mountain View" style="width:304px;height:228px;">
+	</body>
+</html>
