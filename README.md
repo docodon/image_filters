@@ -1,9 +1,9 @@
-# image_filters [ a basic portal where one can upload an image and can add a filter on that image ]
+# image_filters [ a basic portal where one can add filters to uploaded image ]
 
 	system configuration :
 
-		python -2.7 
-		django -1.7
+	 -python -2.7 
+	 -django -1.7
 
 	 - install django tweaks
 	      Install django-tweaks which are useful in rendering of django-forms in templates ( useful in rendering django-forms with bootstrap)
@@ -11,8 +11,8 @@
        	  useful link :
           https://pypi.python.org/pypi/django-widget-tweaks
 
-  - install PIL (python imaging library)
-        it comes pre-installed in ubunutu , You have to install it in Windows
+         - install PIL (python imaging library)
+          it comes pre-installed in ubunutu , You have to install it in Windows
 
 Working : 
   
@@ -22,4 +22,4 @@ Working :
   - run the command : 
      python manage.py runserver
      
-  - goto the link : http://127.0.0.1:8000/home/   
+  - goto the link : 127.0.0.1:8000/home/   
