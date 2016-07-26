@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-	</head>
-	
-	<body>
-	
+    {% extends 'base.html' %}
 
-		<form role="form" enctype="multipart/form-data" action="/home/" method="POST" >
-			{% csrf_token %}
-			{{ form }}
-		<button type="submit" class="btn btn-default" >Upload image !</button>
+   {% block content %}
+     <div class="container">
+
+      {% if image %}
+		     <a href="{{ image.Image.url }}"><img src="{{ image.Image.url }}" alt="We hate to say but something went wrong !" class="img-responsive" ></a>
+      {% endif %}
+    </div>
 	
-		<img src="{{ image.Image.url }}" alt="Mountain View" style="width:304px;height:228px;">
-	</body>
-</html>
+  {% endblock %}	

@@ -36,9 +36,9 @@ class index(View):
 
 			isit=Images.objects.create(Image=thumb_file,Filter='Filterd')
 
-			return render(request,"create_images/home.html",{'form':Upload_image_form,'image':isit})
+			return render(request,"create_images/home.html",{'form':Upload_image_form,'image':isit,'uploaded_image':new_image})
 		else :
-			return render(request,"create_images/home.html",{'form':Upload_image_form,"message":form.errors})
+			return render(request,"create_images/home.html",{'form':Upload_image_form,"message":user_form.errors})
 
 
 
